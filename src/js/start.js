@@ -9,10 +9,6 @@ var Die = {
   face: 6,
   count: 1,
   roll: function(){
-    // var max = this.face;
-    // var min = 1;
-    // console.log(this.toString(), 'max is', this.face);
-    // return Math.floor(Math.random() * (max - min)) + min;
     return randomPosInt(this.face);
   },
   toString: function(){
@@ -86,7 +82,6 @@ var Character = {
   abilityMod: 0,
   attacks: [Attack],
   attack: function(){
-    // var attacks = this.attacks;
     if(this.attacks.length <= 0){ return; }
     var idx = randomPosInt(this.attacks.length)-1;
     var att = this.attacks[idx];
